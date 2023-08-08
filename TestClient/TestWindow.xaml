@@ -1,0 +1,21 @@
+﻿<Window x:Class="TestClient.TestWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestClient"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <Grid>
+        <ListBox x:Name="questionsOut" Style="{DynamicResource ListBoxStyle1}" Margin="0,10,0,50" HorizontalContentAlignment="Stretch" >
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Margin="0,0,0,0" MinHeight="30" Background="#FFE2E1FF" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                        <TextBlock x:Name="questionsNameBox" Text ="{Binding Path=qName}"  Width="400" Height="20"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5,5,0,0" FontWeight="Bold"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Name="startTestButton" Content="Начать" HorizontalAlignment="Left" Margin="386,370,0,0" VerticalAlignment="Top" Width="69" />
+    </Grid>
+</Window>
